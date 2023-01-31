@@ -3,6 +3,22 @@ package com.markets.bean;
 public class Employee {
     private int eId;
     private String name;
+    private Address address;
+
+    public Employee( Address address, int eId, String name, int salary) {
+        super();
+        System.out.println("In the parametrized constructor");
+        this.eId = eId;
+        this.name = name;
+        this.salary = salary;
+        this.address=address;
+    }
+    public Employee(){
+        super();
+        System.out.println("In the non parametrized constructor");
+
+    }
+
     private int salary;
 
     public int geteId() {
