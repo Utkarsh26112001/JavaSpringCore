@@ -4,17 +4,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 <bean id="employee" class="com.markets.bean.Employee">
     <property name="eId" value="101"></property>
-    <property name="name" value="Ram"></property>
+    <property name="name" value="Abhishom"></property>
     <property name="salary" value="1000"></property>
 </bean>
     <bean id="employee1" class="com.markets.bean.Employee">
         <property name="eId" value="102"></property>
-        <property name="name" value="Shyam"></property>
+        <property name="name" value="Sudarshan"></property>
         <property name="salary" value="12000"></property>
     </bean>
     <bean id="employee2" class="com.markets.bean.Employee">
         <property name="eId" value="103"></property>
-        <property name="name" value="Krishna"></property>
+        <property name="name" value="Devesh"></property>
         <property name="salary" value="8000"></property>
     </bean>
 </beans>
