@@ -55,5 +55,14 @@ public class Employee {
     }
 
 
+    private void init() {
+        System.out.println("IN the init");
+    }
+
+    private void destroy() {
+        System.out.println("In the destroy....");
+    }
+
+
 }
 
