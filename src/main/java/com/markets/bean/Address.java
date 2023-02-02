@@ -17,9 +17,7 @@ public class Address {
                 '}';
     }
 
-    public Address() {
 
-    }
 
     public String getAddressline1() {
         return addressline1;

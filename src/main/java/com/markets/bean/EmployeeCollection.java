@@ -1,19 +1,38 @@
 package com.markets.bean;
 
-public class Employee {
+import java.util.List;
+
+public class EmployeeCollection {
     private int eId;
     private String name;
-    private Address address;
+    private List<String> language;
 
-    public Employee( Address address, int eId, String name, int salary) {
-        super();
-        System.out.println("In the parametrized constructor");
+    public List<String> getLanguage() {
+        return language;
+    }
+
+    public EmployeeCollection(int eId, String name, List<String> language, int salary) {
         this.eId = eId;
         this.name = name;
+        this.language = language;
         this.salary = salary;
-        this.address=address;
     }
-    public Employee(){
+
+    public void setLanguage(List<String> language) {
+        this.language = language;
+    }
+
+    @Override
+    public String toString() {
+        return "EmployeeCollection{" +
+                "eId=" + eId +
+                ", name='" + name + '\'' +
+                ", language=" + language +
+                ", salary=" + salary +
+                '}';
+    }
+
+    public EmployeeCollection(){
         super();
         System.out.println("In the non parametrized constructor");
 
@@ -21,10 +40,6 @@ public class Employee {
 
     private int salary;
 
-    public Employee(Address address) {
-     this.address= address;
-        System.out.println("IN the inner bean address");
-    }
 
     public int geteId() {
         return eId;
@@ -50,15 +65,6 @@ public class Employee {
         this.eId = eId;
     }
 
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "eId=" + eId +
-                ", name='" + name + '\'' +
-                ", salary=" + salary +
-                '}';
-    }
-
 
     private void init() {
         System.out.println("IN the init");
@@ -69,8 +75,5 @@ public class Employee {
     }
 
 
-    public Address getAddress() {
-        return address;
-    }
 }
 

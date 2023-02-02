@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
     <bean id="employee" class="com.markets.bean.Employee" init-method="init" destroy-method="destroy">
         <property name="eId" value="101"></property>
         <property name="name" value="Abhishom"></property>
@@ -24,10 +24,37 @@
         <constructor-arg value="69000"></constructor-arg>
     </bean>
 
-    <bean id="address" class="com.markets.bean.Address">
+    <bean id="address" class="com.markets.bean.Address" scope="singleton">
+        <constructor-arg index="0" value=""/>
+        <constructor-arg index="1" value=""/>
 
         <property name="addressline1" value="Hyaat Pune"></property>
         <property name="addressline2" value="Pune"></property>
     </bean>
+    <bean id="employee4" class="com.markets.bean.Employee">
+        <property name="eId" value="105"></property>
+        <property name="name" value="Ani"></property>
+        <property name="salary" value="10000000"></property>
+        <constructor-arg>
+            <bean  class="com.markets.bean.Address">
+                <constructor-arg index="0" value=""/>
+                <constructor-arg index="1" value=""/>
+                <property name="addressline1" value="DDU"></property>
+                <property name="addressline2" value="Pune"></property>
+            </bean>
+        </constructor-arg>
 
+    </bean>
+    <bean id="empObject" class="com.markets.bean.EmployeeCollection">
+    <property name="eId" value="106"></property>
+    <property name="name" value="ASHWIN"></property>
+    <property name="salary" value="888888"></property>
+    <property name="language">
+        <list>
+            <value>English</value>
+            <value>Hindi</value>
+            <value>Spanish</value>
+        </list>
+    </property>
+    </bean>
 </beans>
