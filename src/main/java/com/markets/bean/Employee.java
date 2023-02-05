@@ -55,10 +55,10 @@ public class Employee {
         return "Employee{" +
                 "eId=" + eId +
                 ", name='" + name + '\'' +
+                ", address=" + address +
                 ", salary=" + salary +
                 '}';
     }
-
 
     private void init() {
         System.out.println("IN the init");
@@ -71,6 +71,9 @@ public class Employee {
 
     public Address getAddress() {
         return address;
+    }
+
+    public void setAddress(Address address) {
     }
 }
 

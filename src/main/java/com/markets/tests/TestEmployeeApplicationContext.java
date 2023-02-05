@@ -3,6 +3,7 @@ package com.markets.tests;
 import com.markets.bean.Address;
 import com.markets.bean.Employee;
 import com.markets.bean.EmployeeCollection;
+import com.markets.resources.Configuration;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -28,7 +29,8 @@ public class TestEmployeeApplicationContext {
         System.out.println(address1);
         EmployeeCollection ep=(EmployeeCollection) ac.getBean("empObject");
         System.out.println(ep);
-
-        //ac.close();
+        Employee employee5=(Employee) ac.getBean("employee5");
+        System.out.println(employee5);
+        ac.close();
     }
 }
